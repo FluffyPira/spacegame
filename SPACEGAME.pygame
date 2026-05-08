@@ -1,0 +1,10 @@
+import main
+
+if __name__ == "__main__":
+    try:
+        game = main.LivePirateGame()
+        game.run()
+    except Exception as e:
+        import traceback
+        traceback.print_exc()  # full traceback for debugging
+        print(f"An error occurred: {e}")
