@@ -462,7 +462,7 @@ class LivePirateGame:
                             self.docking_menu_active = False
 
                 # Filter out expired weapons
-                self.ai_weapons = [weapon for weapon in self.ai_weapons if not weapon.hit and not (
+                self.ai_weapons[:] = [weapon for weapon in self.ai_weapons if not weapon.hit and not (
                     weapon.distance_traveled > 5000 # or weapon.is_off_screen(
                         # self.environment.camera_x,
                         # self.environment.camera_y,
